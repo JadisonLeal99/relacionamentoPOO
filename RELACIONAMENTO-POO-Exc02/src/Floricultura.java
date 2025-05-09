@@ -38,24 +38,24 @@ public class Floricultura {
 	}
 	
 	
-	public Flor calcularReceitaLojaFlor() {
-		boolean maiorReceitaPresente;
-		Flor presenteReceitaFlor = null;
+	public boolean lojaVendeuParaPresente() {
+		double receitaParaPresente = 0;
+		double receitaNaoPresente = 0;
 		
 		for(Flor f : listaFlores) {
-			if(f.faturamentoPresenteFlorTrue() > f.faturamentoPresenteFlorFalse()) {
-				maiorReceitaPresente = true;
-				presenteReceitaFlor = f;
+			if(f.getPresenteFlor()) {
+				receitaParaPresente += f.getPreco();
+			} else {
+				receitaNaoPresente += f.getPreco();
 			}
-		
 		}
-		return presenteReceitaFlor;
+		return receitaParaPresente > receitaNaoPresente;
 	}
-	
 	
 	
 }
 	
+
 
 
 

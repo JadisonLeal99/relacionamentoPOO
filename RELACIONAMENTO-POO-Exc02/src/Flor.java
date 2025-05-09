@@ -5,31 +5,15 @@
 //b) Se a loja teve uma receita maior vendendo flores para presente ou não
 public class Flor {
 	private String nomeFlor;
-	private Double preco;
+	private double preco;
 	private String nomeCliente;
 	private Boolean presenteFlor;
 	
-	public Flor(String nomeFlor, Double preco, String nomeCliente, Boolean presenteFlor) {
+	public Flor(String nomeFlor, double preco, String nomeCliente, boolean presenteFlor) {
 		setNomeFlor(nomeFlor);
 		setPreco(preco);
 		setNomeCliente(nomeCliente);
 		setPresenteFlor(presenteFlor);
-	}
-	
-	public Double faturamentoPresenteFlorTrue() {
-		double faturamentoTrue = 0;
-		if(presenteFlor == true) {
-			faturamentoTrue += preco;
-		}
-		return faturamentoTrue;
-	}
-	
-	public Double faturamentoPresenteFlorFalse() {
-		double faturamentoFalse = 0;
-		if(presenteFlor == false) {
-			faturamentoFalse += preco;
-		}
-		return faturamentoFalse;
 	}
 	
 	
@@ -44,7 +28,7 @@ public class Flor {
 		this.nomeFlor = nomeFlor;
 	}
 	
-	public Double getPreco() {
+	public double getPreco() {
 		return preco;
 	}
 	
@@ -66,7 +50,7 @@ public class Flor {
 		this.nomeCliente = nomeCliente;
 	}
 	
-	public Boolean getPresenteFlor() {
+	public boolean getPresenteFlor() {
 		return presenteFlor;
 	}
 	
